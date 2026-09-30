@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+outputs/
+data/raw/
+data/collected/
+data/pilot*/
+annotations/
+.test-output/
+*.tmp
+*.log

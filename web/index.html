@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EchoBench · Evidence workbench</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <header><a class="brand" href="/">EchoBench<span>Evidence workbench</span></a><span class="tag">Research prototype · v0.1</span></header>
+  <div class="layout">
+    <aside><div class="aside-top"><h2>Claim library</h2><input id="search" type="search" placeholder="Filter claims…" aria-label="Filter claims"><span id="library-count"></span></div><nav id="case-list" aria-label="Claims"></nav></aside>
+    <main>
+      <section class="hero"><p class="eyebrow">TRACE THE EVIDENCE</p><h1>Many citations.<br>How many origins?</h1><p>Inspect the source chain, separate observation from repetition, and record what the evidence supports.</p></section>
+      <div id="loading" role="status">Loading claim library…</div>
+      <section id="workspace" hidden>
+        <div class="claim-head"><span id="case-kind" class="tag"></span><p id="case-id" class="eyebrow"></p><h2 id="claim"></h2><div id="stats" class="stats"></div></div>
+        <div class="tabs" role="tablist"><button id="sources-tab" role="tab" aria-selected="true" aria-controls="sources-panel">Sources & annotation</button><button id="lineage-tab" role="tab" aria-selected="false" aria-controls="lineage-panel">Estimated genealogy</button></div>
+        <section id="sources-panel" role="tabpanel" aria-labelledby="sources-tab">
+          <div class="annotation-head"><div><h3>Annotation session</h3><p>Assign the same family ID only when evidence supports a shared origin.</p></div><label>Annotator ID<input id="annotator" placeholder="reviewer-1" autocomplete="off"></label></div>
+          <div class="truth-panel"><label>Claim truth<select id="truth"><option value="unknown">Unknown / unresolved</option><option value="true">True</option><option value="false">False</option></select></label><label>Truth rationale and primary reference<textarea id="truth-rationale" rows="2" placeholder="Provide an inspectable reference for known truth. Source agreement alone is insufficient."></textarea></label></div>
+          <div id="documents"></div>
+          <div class="save-bar"><p id="save-status" role="status">Gold labels are hidden during annotation.</p><button id="save" class="primary">Save annotation</button></div>
+        </section>
+        <section id="lineage-panel" role="tabpanel" aria-labelledby="lineage-tab" hidden><div class="notice">These clusters are estimates. Distinct clusters do not establish source independence. Inspecting predictions before annotating may bias your labels.</div><div id="families"></div><h3>Observed and inferred relationships</h3><div id="edges"></div></section>
+      </section>
+      <footer>EchoBench / EchoGuard · Local research workspace · Synthetic fixtures are diagnostic examples.</footer>
+    </main>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body></html>

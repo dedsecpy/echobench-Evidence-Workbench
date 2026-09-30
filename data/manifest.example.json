@@ -1,0 +1,11 @@
+[
+  {
+    "id": "commoncrawl-file-formats",
+    "eventId": "commoncrawl-documentation",
+    "claim": "Common Crawl distributes extracted plain text as WET files.",
+    "urls": [
+      "https://commoncrawl.org/get-started",
+      "https://commoncrawl.org/overview"
+    ]
+  }
+]
